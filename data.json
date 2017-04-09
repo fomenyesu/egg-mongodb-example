@@ -1,0 +1,126 @@
+web_admin
+[
+{
+    "_id" : ObjectId("58d8a899f5f2486f1f6d4236"),
+    "uid" : 1,
+    "name" : "admin",
+    "pass" : "123",
+    "status" : 1,
+    "time" : "1325472736"
+}
+{
+    "_id" : ObjectId("58db7828a14b14815447cf33"),
+    "name" : "sdf",
+    "pass" : "123",
+    "status" : 1,
+    "time" : "1325472736",
+    "uid" : 3,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("58db7d3bcee4d48df6f5bdfd"),
+    "name" : "sdddf",
+    "pass" : "123",
+    "status" : 1,
+    "time" : "1325472736",
+    "uid" : 4,
+    "__v" : 0
+}
+
+]
+web_news
+[
+{
+    "_id" : ObjectId("58d8a8ea73410562025f37b0"),
+    "nid" : 1,
+    "title" : "aboutus",
+    "con" : "httml",
+    "module" : "aboutus",
+    "type" : 1,
+    "ord" : 1,
+    "seotitle" : "1",
+    "seokeyword" : "1",
+    "seodesc" : "1",
+    "uid" : 1,
+    "langid" : "cn",
+    "time" : "1325472736"
+}
+{
+    "_id" : ObjectId("58d8a8ea73410562025f37b1"),
+    "nid" : 2,
+    "title" : "aboutus1",
+    "con" : "httml",
+    "module" : "aboutus",
+    "type" : 1,
+    "ord" : 1,
+    "seotitle" : "1",
+    "seokeyword" : "1",
+    "seodesc" : "1",
+    "uid" : 1,
+    "langid" : "cn",
+    "time" : "1325472736"
+}
+{
+    "_id" : ObjectId("58d8a8ea73410562025f37b2"),
+    "nid" : 3,
+    "title" : "case1",
+    "con" : "httml",
+    "module" : "case",
+    "type" : 2,
+    "ord" : 1,
+    "seotitle" : "1",
+    "seokeyword" : "1",
+    "seodesc" : "1",
+    "uid" : 1,
+    "langid" : "cn",
+    "time" : "1325472736"
+}
+{
+    "_id" : ObjectId("58d8a8ea73410562025f37b3"),
+    "nid" : 4,
+    "title" : "case2",
+    "con" : "httml",
+    "module" : "case",
+    "type" : 2,
+    "ord" : 1,
+    "seotitle" : "1",
+    "seokeyword" : "1",
+    "seodesc" : "1",
+    "uid" : 1,
+    "langid" : "cn",
+    "time" : "1325472736"
+}
+]
+web_news_type
+[
+{
+    "_id" : ObjectId("58d8a91a73410562025f37b4"),
+    "tid" : 1,
+    "name" : "关于我们",
+    "link" : "aboutus.html",
+    "ord" : 1,
+    "status" : 1,
+    "time" : "1325472736",
+    "uid" : 1
+}
+{
+    "_id" : ObjectId("58d8a91a73410562025f37b5"),
+    "tid" : 2,
+    "name" : "案例",
+    "link" : "case.html",
+    "ord" : 2,
+    "status" : 1,
+    "time" : "1325472736",
+    "uid" : 1
+}
+]
+
+{
+    "_id" : ObjectId("58db4e031f8e19e2c21da9a0"),
+    "modelName" : "counter",
+    "uid" : 4,
+    "nid" : 4,
+    "tid" : 3
+}
+
+{"uid":"3","name":"user1","pass":"123","status":"1","time":"1325472736"}

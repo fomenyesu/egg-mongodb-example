@@ -1,0 +1,107 @@
+{
+  "name": "egg-mongodb-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "egg-bin test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "6.4.0",
+    "egg-bin": "^3.1.0",
+    "egg-mock": "^3.2.0",
+    "supertest": "^3.0.0",
+    "babel": "5.8.29",
+    "babel-core": "5.8.33",
+    "babel-loader": "5.3.3",
+    "babel-eslint": "4.1.8",
+    "babel-plugin-import": "^1.0.1",
+    "express": "^4.13.4",
+    "html-webpack-plugin": "^2.22.0",
+    "case-sensitive-paths-webpack-plugin": "^1.1.4",
+    "chalk": "^1.1.1",
+    "commander": "~2.9.0",
+    "css-loader": "0.24.0",
+    "extract-text-webpack-plugin": "~1.0.1",
+    "file-loader": "~0.8.4",
+    "json-loader": "~0.5.4",
+    "less": "2.5.3",
+    "less-loader": "2.2.1",
+    "less-plugin-npm-import": "^2.1.0",
+    "style-loader": "0.13.1",
+    "eslint": "1.8.0",
+    "eslint-loader": "1.1.0",
+    "node-sass": "3.8.0",
+    "postcss": "^5.0.19",
+    "postcss-loader": "0.11.1",
+    "sass-loader": "4.0.0",
+    "webpack": "1.13.2",
+    "webpack-dev-middleware": "1.6.1",
+    "webpack-hot-middleware": "2.12.2"
+  },
+  "dependencies": {
+    "antd": "^2.8.2",
+    "egg": "^1.0.0",
+    "egg-mongoose": "^1.1.1",
+    "egg-security": "^1.8.0",
+    "egg-validate": "^1.0.0",
+    "egg-view-nunjucks": "^2.0.0",
+    "egg-view-react": "^0.0.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "redux": "3.4.0",
+    "redux-logger": "2.6.1",
+    "redux-thunk": "2.0.1",
+    "rucksack-css": "^0.9.1"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "rules": {
+      "indent": [
+        2,
+        4
+      ],
+      "quotes": [
+        2,
+        "single"
+      ],
+      "linebreak-style": [
+        2,
+        "windows"
+      ],
+      "semi": [
+        2,
+        "always"
+      ],
+      "no-trailing-spaces": 2,
+      "space-before-function-paren": [
+        2,
+        "always"
+      ],
+      "eqeqeq": [
+        2,
+        "allow-null"
+      ],
+      "no-console": 0,
+      "no-cond-assign": 0,
+      "no-extra-boolean-cast": 0,
+      "no-unused-vars": 0
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended"
+  },
+  "maintainers": [
+    {
+      "name": "fomenyesu",
+      "email": "fomenyesu@gmail.com"
+    }
+  ]
+}
