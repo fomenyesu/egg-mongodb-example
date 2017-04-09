@@ -33,7 +33,7 @@ exports.security = {
   },
 };
 exports.mongoose = {
-  url: 'mongodb://127.0.0.1/zhiniaodb',
+  url: 'mongodb://127.0.0.1/testdb',
   options: {}
 };
 
