@@ -50,7 +50,6 @@
     "egg-security": "^1.8.0",
     "egg-validate": "^1.0.0",
     "egg-view-nunjucks": "^2.0.0",
-    "egg-view-react": "^0.0.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "redux": "3.4.0",
