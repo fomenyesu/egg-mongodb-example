@@ -9,7 +9,7 @@ exports.view = {
 };
 // mount middleware
 exports.middleware = [
-  'robot','errorHandler'
+  'errorHandler'
 ];
 exports.errorHandler = {
   match: '/api',
