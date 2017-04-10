@@ -7,10 +7,6 @@ exports.view = {
     '.tpl': 'nunjucks',
   },
 };
-exports.news = {
-  pageSize: 5,
-  serverUrl: 'https://hacker-news.firebaseio.com/v0',
-};
 // mount middleware
 exports.middleware = [
   'robot','errorHandler'
@@ -18,14 +14,6 @@ exports.middleware = [
 exports.errorHandler = {
   match: '/api',
 },
-// middleware config
-exports.robot = {
-  ua: [
-    /curl/i,
-    /Baiduspider/i,
-  ],
-};
-
 exports.security = {
   ignore: '/api/',
   csrf: {
