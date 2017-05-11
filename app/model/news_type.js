@@ -3,7 +3,7 @@ module.exports = mongoose => {
     uid: { type: Number  },
     status: { type: Number  },
     ord: { type: Number  },
-    tid: { type: Number  , unique: true  },
+    tid: { type: Number , unique: true },
     time: { type: String  },
     name: { type: String  },
     link: { type: String  }

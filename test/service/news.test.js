@@ -38,13 +38,13 @@ describe('test/service/news.test.js', () => {
     it('should get null when news not exists', function* () {
       const ctx = app.mockContext();
       const news = yield ctx.service.news.show({nid:10000});
-      assert(news.meta.total==1);
+      assert(news.meta.total==0);
     });
   });
   describe('update()', () => {
     it('should update exists news', function* () {
       const ctx = app.mockContext();
-      const result = yield ctx.service.news.update(19,{ord:0});
+      const result = yield ctx.service.news.update(1,{ord:0});
         console.log("test console",result);
       assert(result.ord==0);
       // assert(result.nid==5);
