@@ -2,7 +2,7 @@
 module.exports = app => {
   class NewsTypeService extends app.Service {
     * index(params) {
-      let newsType =  yield this.ctx.model.newsType.find({params});
+      let newsType =  yield this.ctx.model.newsType.find(params);
       let result = {};
       result.meta = {total: newsType.length };
       result.data = newsType;
