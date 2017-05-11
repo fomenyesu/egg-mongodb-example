@@ -2,7 +2,7 @@
 module.exports = app => {
   class UsersService extends app.Service {
     * index(params) {
-      let users =  yield this.ctx.model.users.find({});
+      let users =  yield this.ctx.model.users.find(params);
       let result = {};
       result.meta = {total: users.length };
       result.data = users;
@@ -16,29 +16,21 @@ module.exports = app => {
       return result;
     }
     * update(uid,request) {
-      let result = this.ctx.model.users.findOneAndUpdate({uid},  {$set:request},
-        function(err, doc){
-        if(err){console.log("参数错误"); }
-        console.log(doc);
-      });
+      let result = yield this.ctx.model.users.findOneAndUpdate({uid},{$set:request});
       return result;
     }
     * create(request) {
+      if (!request) {return};
       const ctx = this.ctx;
-      ctx.model.idg.findOneAndUpdate({modelName:"counter"},{$inc:{'uid':1}}, {new:true},
-        function(err, doc){
-        if(err){console.log("参数错误"); }
-        request.uid=doc.uid;
-        ctx.model.users.create(request,
-          function(err1, doc1){
-          if(err1){console.log("参数错误"); }
-        })
-      });
+      let doc = yield ctx.model.idg.findOneAndUpdate({modelName:"counter"},{$inc:{'uid':1}}, {new:true});
+      request.uid=doc.uid;
+      let result = yield ctx.model.users.create(request);
+      return result;
     }
     * destroy(params) {
-      let result = this.ctx.model.users.remove({"uid":{ $in:params.id.split(',')}});
-      return result;
-
+      if (!params&&!params.id) {return};
+      let result = yield this.ctx.model.users.remove({"uid":{ $in:params.id.split(',')}});
+      return result.result;
     }
   }
   return UsersService;

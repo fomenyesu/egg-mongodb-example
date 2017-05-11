@@ -1,6 +1,6 @@
 // 定义创建接口的请求参数规则
-const createRule = {name: 'string', pass: 'string', };
-const updateByIdRule = {id: 'int', name: 'string', pass: 'string', }
+const createRule = {name: 'string' };
+const updateByIdRule = {name: {type:'string',required:false}};
 
 // 1 获取文章分类列表，分页，每页几个
 exports.index = function* () {
@@ -9,7 +9,7 @@ exports.index = function* () {
 
   // 设置响应体和状态码
   this.body = result;
-  this.status = 201;
+  this.status = 200;
 };
 // 2 根据ID获取文章分类信息
 exports.show = function* () {
@@ -18,7 +18,7 @@ exports.show = function* () {
 
   // 设置响应体和状态码
   this.body = result;
-  this.status = 201;
+  this.status = 200;
 };
 
 exports.create = function* () {
@@ -34,11 +34,11 @@ exports.create = function* () {
 exports.update = function* () {
   console.log(this.params);
   this.validate(updateByIdRule);
-  const result = yield this.service.newsType.update(this.params);
+  const result = yield this.service.newsType.update(this.params.id,this.request.body);
 
   // 设置响应体和状态码
   this.body = result;
-  this.status = 204;
+  this.status = 200;
 };
 exports.destroy = function* () {
   const result = yield this.service.newsType.destroy(this.params);

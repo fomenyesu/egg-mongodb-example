@@ -2,7 +2,7 @@
 module.exports = app => {
   class NewsService extends app.Service {
     * index(params) {
-      let news =  yield this.ctx.model.news.find({});
+      let news =  yield this.ctx.model.news.find({params});
       let result = {};
       result.meta = {total: news.length };
       result.data = news;
@@ -16,24 +16,16 @@ module.exports = app => {
       return result;
     }
     * update(nid,request) {
-      let result = this.ctx.model.news.findOneAndUpdate({nid},  {$set:request},
-        function(err, doc){
-        if(err){console.log("参数错误"); }
-        console.log(doc);
-      });
+      let result = yield this.ctx.model.news.findOneAndUpdate({nid},  {$set:request});
       return result;
     }
     * create(request) {
+      if (!request) {return};
       const ctx = this.ctx;
-      ctx.model.idg.findOneAndUpdate({modelName:"counter"},{$inc:{'nid':1}}, {new:true},
-        function(err, doc){
-        if(err){console.log("参数错误"); }
-        request.nid=doc.nid;
-        ctx.model.news.create(request,
-          function(err1, doc1){
-          if(err1){console.log("参数错误"); }
-        })
-      });
+      let doc = yield ctx.model.idg.findOneAndUpdate({modelName:"counter"},{$inc:{'nid':1}}, {new:true});
+      request.nid=doc.nid;
+      let result = yield ctx.model.news.create(request);
+      return result;
     }
     * destroy(params) {
       let result = this.ctx.model.news.remove({"nid":{ $in:params.id.split(',')}});

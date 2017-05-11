@@ -6,13 +6,13 @@ const updateByIdRule = { name: {type:'string',required:false},
 exports.index = function* () {
   const result = yield this.service.users.index(this.params);
   this.body = result;
-  this.status = 201;
+  this.status = 200;
 };
 // 2 根据ID获取用户信息
 exports.show = function* () {
   const result = yield this.service.users.show(this.params);
   this.body = result;
-  this.status = 201;
+  this.status = 200;
 };
 // 3 创建用户
 exports.create = function* () {
