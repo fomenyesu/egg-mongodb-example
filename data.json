@@ -122,5 +122,13 @@ web_news_type
     "nid" : 4,
     "tid" : 3
 }
+IdGenerator
+{
+    "_id" : ObjectId("592069937092ebaddbdcbc5b"),
+    "modelName" : "counter",
+    "uid" : 1,
+    "tid" : 0,
+    "nid" : 0
+}
 
 {"uid":"3","name":"user1","pass":"123","status":"1","time":"1325472736"}
