@@ -5,17 +5,32 @@ a example of eggjs, mongodb, restful api and other stuff made it work...
 
 ## Usage
 
+make sure you nodejs version >7.0
 install mongodb
 start mongodb
 import data.json to mongodb
+  1. create Collection: "web_admin" "web_news" "web_newsType" "IdGenerator"
+  2. create Documents in data.json
 run npm to start server
+  npm start
 
 ```bash
 $ npm install
-$ npm run dev
+$ npm start
 ```
 
 ## REST API Example
+
+Follow the naming conventions of rails:
+
+method     | url                                                    | file path               | controller name
+---        | ---                                                    | ---                     | ---
+**GET**    | `/api/{objects}[?per_page={per_page}&page={page}]` | `app/controller/{objects}.js` | **index()**
+**GET**    | `/api/{objects}/:id`                               | `app/controller/{objects}.js` | **show()**
+**POST**   | `/api/{objects}`                                   | `app/controller/{objects}.js` | **create()**
+**PUT**    | `/api/{objects}/:id`                               | `app/controller/{objects}.js` | **update()**
+**DELETE** | `/api/{objects}/:id[s]`                            | `app/controller/{objects}.js` | **destroy()**
+
 
 api/users GET List
 
