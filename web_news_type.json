@@ -1,0 +1,20 @@
+{
+    "_id" : ObjectId("58d8a91a73410562025f37b4"),
+    "tid" : 1,
+    "name" : "关于我们",
+    "link" : "aboutus.html",
+    "ord" : 1,
+    "status" : 1,
+    "time" : "1325472736",
+    "uid" : 1
+}
+{
+    "_id" : ObjectId("58d8a91a73410562025f37b5"),
+    "tid" : 2,
+    "name" : "案例",
+    "link" : "case.html",
+    "ord" : 2,
+    "status" : 1,
+    "time" : "1325472736",
+    "uid" : 1
+}
